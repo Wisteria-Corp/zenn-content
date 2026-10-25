@@ -1,6 +1,6 @@
 ---
 title: 日本語 STT 実測 — モデル別の精度・曜日破壊・辞書注入の効果（合成音声ベンチ）
-emoji: 🎙
+emoji: 🎤
 type: tech
 topics:
 - whisper
