@@ -1,5 +1,5 @@
 ---
-title: 日本語 STT 12 エンジン実測 — AmiVoice・Google・Deepgram・Whisper を同じ音声で比べた を同じ音声で比べた（曜日・固有名詞・数値・単語登録）
+title: 日本語 STT 12 エンジン実測 — AmiVoice・Google・Deepgram・Whisper を同じ音声で比べた
 emoji: 🎤
 type: tech
 topics:
@@ -135,3 +135,4 @@ Whisper 側の語彙注入も 6/6 にはなりますが、CER は 2.3% 残りま
 限界も書いておきます。合成音声 1 種類・6 文・各 1 回で、肉声やノイズ環境は未検証です。AmiVoice の他エンジン（医療・金融など）、各社のストリーミング API、Google の他モデルも試していません。数字は「この条件でこうだった」以上のことを言っていません。
 
 前回のローカル Whisper だけの実測は[こちら](https://zenn.dev/wisteriacorp/articles/wisteria-218be5072ded)、個人の AI 基盤の全体像は[こちら](https://zenn.dev/wisteriacorp/articles/wisteria-47f423fb1c16)にまとめています。
+
