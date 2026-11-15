@@ -10,7 +10,14 @@ topics:
 - asr
 published: true
 ---
-日本語の音声メモを文字にするとき、どのエンジンで何が壊れるのか。前回はローカルの Whisper 系だけで測りましたが、今回は同じ合成音声ベンチに **クラウド 7 社（AmiVoice・Google・OpenAI・Deepgram・Azure・ElevenLabs・AssemblyAI）とローカル非 Whisper 系 3 本（ReazonSpeech・SenseVoice・kotoba-whisper）** を足して、23 条件を横並びで比べました。先に結果です。
+日本語の音声メモを文字にするなら、どのエンジンを選べばいいか。同じ合成音声で 23 条件を測った結論を先に書きます。
+
+- **精度で選ぶなら**: AmiVoice＋単語登録、または Google Chirp 3＋適応フレーズ。どちらも文字誤り率 0.0%
+- **速さで選ぶなら**: クラウドは Azure Fast transcription、ローカルは ReazonSpeech。どちらも 1 文 0.5 秒
+- **避ける組み合わせ**: 小さい Whisper（base/small）で曜日入りの予定メモ。曜日が 6 個中 4 個壊れ、壊れても気づけません
+- **単語登録は効くエンジンと効かないエンジンがある**: AmiVoice・Google・Deepgram・OpenAI・Whisper medium は固有名詞が 6/6 に上がり、AssemblyAI・ReazonSpeech・kotoba は登録しても変わりませんでした
+
+測ったのは **クラウド 7 社（AmiVoice・Google・OpenAI・Deepgram・Azure・ElevenLabs・AssemblyAI）とローカル（Whisper 系と、非 Whisper 系の ReazonSpeech・SenseVoice・kotoba-whisper）** です。全条件の結果はこちらです。
 
 | エンジン（条件） | 場所 | CER | 曜日 | 固有名詞 | 数値 | 応答/文 |
 |---|---|---|---|---|---|---|
